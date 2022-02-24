@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rapha</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#EDEEE6">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  </head>
+
+<body>
+  <div class="container">
+    <div class="full-w pa3 pa1-s ta-center">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d0/Rapha_logo.svg/1200px-Rapha_logo.svg.png" width="80">
+    </div>
+
+    <div class="third-w half-s vcenter" id="nameColor">
+
+      <div id="selectItem" class="pa3 pa1-s">
+        <h1 id="item" class="ta-left select-color">Select an Item</h1>
+      </div>
+
+      <div id="helmetColor" class="pa3 pa1-s">
+        <h1 id="item" class="ta-left">Helmet RCC</h1>
+        <ul class="colors ta-left">
+          <li class="yellowHelmet active" id="yellowHelmet"></li>
+          <li class="blackHelmet" id="blackHelmet"></li>
+          <li class="whiteHelmet" id="whiteHelmet"></li>
+        </ul>
+      </div>
+
+      <div id="giletColor" class="pa3 pa1-s">
+        <h1 id="item" class="ta-left">Classic Gilet II</h1>
+        <ul class="colors ta-left">
+          <li class="yellowGilet active" id="yellowGilet"></li>
+          <li class="turquoiseGilet" id="turquoiseGilet"></li>
+          <li class="pinkGilet" id="pinkGilet"></li>
+        </ul>
+      </div>
+
+      <div id="bibColor" class="pa3 pa1-s">
+        <h1 id="item" class="ta-left">Classic Bib Shorts II</h1>
+        <ul class="colors ta-left">
+          <li class="blackBib active" id="blackBib"></li>
+          <li class="navyBib" id="navyBib"></li>
+        </ul>
+      </div>
+
+      <div id="socksColor" class="pa3 pa1-s">
+        <h1 id="item" class="ta-left">RCC Socks</h1>
+        <ul class="colors ta-left">
+          <li class="whiteSocks active" id="whiteSocks"></li>
+          <li class="greySocks" id="greySocks"></li>
+          <li class="blackSocks" id="blackSocks"></li>
+          <li class="pinkSocks" id="pinkSocks"></li>
+        </ul>
+      </div>
+
+      <div id="shoesColor" class="pa3 pa1-s">
+        <h1 id="item" class="ta-left">Classic Shoes</h1>
+        <ul class="colors ta-left">
+          <li class="yellowShoes active" id="yellowShoes"></li>
+          <li class="blackShoes" id="blackShoes"></li>
+          <li class="whiteShoes" id="whiteShoes"></li>
+          <li class="pinkShoes" id="pinkShoes"></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="third-w ta-center img-half">
+      <div class="img">
+
+        <div id="helmet" class="helmet link" data-rel="helmetColor">
+          <div class="dotButton">
+            <div class="dots"> </div>
+          </div>
+          <img class="helmetBlack" src="assets/helmet/helmet_black.png">
+          <img class="helmetWhite" src="assets/helmet/helmet_white.png">
+        </div>
+
+        <div id="glasses" class="glasses link" data-rel="glassesColor"></div>
+
+        <div id="gilet" class="gilet link" data-rel="giletColor">
+          <div class="dotButton">
+            <div class="dots"> </div>
+          </div>
+          <img class="giletTurquoise" src="assets/gilet/gilet_turquoise.png">
+          <img class="giletPink" src="assets/gilet/gilet_pink.png">
+        </div>
+
+        <div id="bib" class="bib link" data-rel="bibColor">
+          <div class="dotButton">
+            <div class="dots"> </div>
+          </div>
+          <img class="bibNavy" src="assets/bib/bib_navy.png">
+        </div>
+
+        <div id="socks" class="socks link" data-rel="socksColor">
+          <div class="dotButton">
+            <div class="dots"> </div>
+          </div>
+          <img class="socksBlack" src="assets/socks/socks_black.png">
+          <img class="socksGrey" src="assets/socks/socks_grey.png">
+          <img class="socksPink" src="assets/socks/socks_pink.png">
+        </div>
+
+        <div id="shoes" class="shoes link" data-rel="shoesColor">
+          <div class="dotButton">
+            <div class="dots"> </div>
+          </div>
+          <img class="shoesWhite" src="assets/shoes/shoes_white.png">
+          <img class="shoesBlack" src="assets/shoes/shoes_black.png">
+          <img class="shoesPink" src="assets/shoes/shoes_pink.png">
+        </div>
+
+      </div>
+    </div>
+
+    <div class="third-w">
+      <div class="pa3 ta-right-l ta-center-s">
+        <p>Rapha apparel collection satisfies the needs of every type of ride-from
+          winter training to the hottest most demanding summer temperatures</p>
+        <a class="button" target="_blank" href="https://www.rapha.cc">Shop the look</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOAD colorPicker.js TO USE IT -->
+  <script type="text/javascript" src="colorPicker.js"></script>
+
+</body>
+</html>

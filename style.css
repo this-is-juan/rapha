@@ -1,0 +1,429 @@
+@font-face {
+  font-family: 'RaphaSansCondensedBold';
+  src: url(fonts/RaphaSansCondensed-Bold.woff);
+}
+
+@font-face {
+  font-family: 'RaphaSerifHead-Roman';
+  src: url(fonts/RaphaSerifHead-Roman.woff);
+}
+
+
+body {
+  margin: 0;
+  font-family: 'RaphaSerifHead-Roman', Garamond, Times New Roman, serif;
+  background: #EDEEE6;
+}
+
+/* |||||||| RESET |||||||| */
+
+html{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* |||||||| TEXT |||||||| */
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 24px 0;
+  font-family: 'RaphaSansCondensedBold', sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1;
+  font-family: 'RaphaSansCondensedBold', sans-serif;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+.button {
+  border: none;
+  text-decoration: underline;
+  color: #000;
+  cursor: pointer;
+  margin-top: 16px;
+  font-size: 1rem;
+  line-height: 1.8;
+  font-family: 'RaphaSerifHead-Roman', Garamond, Times New Roman, serif;
+}
+
+.button:hover {
+  color: #f67599;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.ta-left {
+  text-align: left;
+}
+
+.ta-right-l {
+  text-align: right;
+}
+
+
+/* |||||||| GARMENT COMPONENTS |||||||| */
+
+ul {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+li {
+  margin-right: 1rem;
+  list-style: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+li:last-child {
+  margin-right: 0;
+}
+
+li:hover {
+  border: 2px solid #333 !important;
+}
+
+.active {
+  box-shadow: inset 0 0 0 3px #EDEEE6;
+  border: 2px solid #333 !important;
+}
+
+
+/* |||||||| COLORS  |||||||| */
+
+.blackHelmet,
+.blackBib,
+.blackShoes,
+.blackSocks {
+  background: #222;
+  border: 2px solid #333;
+}
+
+.greySocks{
+  background: #999;
+  border: 2px solid #666;
+}
+
+.whiteHelmet,
+.whiteShoes,
+.whiteSocks {
+  background: #FFF;
+  border: 2px solid #ccc;
+}
+
+.yellowHelmet,
+.yellowGilet,
+.yellowShoes {
+  background: #EBf760;
+  border: 2px solid #CEE009;
+}
+
+.turquoise,
+.turquoiseGilet {
+  background: #01779D;
+  border: 2px solid #0a6d91;
+}
+
+.pinkGilet {
+  background: #EE9390;
+  border: 2px solid #B3706E;
+}
+
+.navyBib{
+  background: #20405E;
+  border: 2px solid #002041;
+}
+
+.pinkShoes,
+.pinkSocks {
+  background: #F76586;
+  border: 2px solid #D63A6C;
+}
+
+.select-color {
+  color: #C0C1B9;
+}
+
+
+/* |||||||| IMAGE |||||||| */
+@keyframes dots{0%{transform:scale(.75); opacity:0;}20%{transform:scale(1); opacity:.75;}40%{transform:scale(.75); opacity:.25;}60%{transform:scale(1); opacity:.75;}80%{transform:scale(.75); opacity:.25;}100%{transform:scale(.75); opacity:0; }}
+@keyframes ripple {
+   0% {
+    left:5px;
+    top:5px;
+    width:0;
+    height:0;
+    opacity: 1;
+  }
+  100% {
+    left:-8px;
+    top:-8px;
+    opacity: 0;
+    width:32px;
+    height:32px;
+  }
+}
+
+.dotButton{
+  position: absolute;
+  width:15px;
+  height:15px;
+  margin-left: 60px;
+  margin-top: 20px;
+  transition: 0.2s ease-in-out;
+}
+
+.dotButton:hover {
+  transform: scale(1.2);
+  transform-origin: 7px 7px;
+}
+
+.dots:before{
+  content:' ';
+  position: absolute;
+  z-index:2;
+  left:0;
+  top:0;
+  width:10px;
+  height:10px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.dots:after {
+  content:' ';
+  position: absolute;
+  z-index:1;
+  width:10px;
+  height:10px;
+  background-color: black;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0px rgba(0,0,0,.3) inset;
+  -webkit-animation-name:'ripple';
+  -webkit-animation-duration: 1.2s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-iteration-count: 3;
+  -webkit-animation-direction: normal;
+}
+
+
+.dots:focus{
+  outline: none;
+  border: none;
+}
+
+.img {
+  background: url('assets/base.png');
+  background-size: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  margin: 0 auto;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.helmetBlack,
+.helmetWhite {
+  width: 200px;
+  margin: 0 auto;
+  cursor: pointer;
+  display: none;
+}
+
+.giletTurquoise,
+.giletPink {
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  margin-top: 1px;
+  display: none;
+}
+
+.bibNavy {
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  display: none;
+}
+
+.socksGrey,
+.socksBlack,
+.socksPink {
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  margin: 3px auto;
+  display: none;
+}
+
+.shoesBlack,
+.shoesWhite,
+.shoesPink {
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  margin: 3px auto;
+  display: none;
+}
+
+/* |||||||| GRID |||||||| */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.full-w {
+  grid-column: span 12;
+}
+
+.third-w {
+  grid-column: span 4;
+}
+
+.pa1 {
+  padding: 1rem;
+}
+
+.pa2 {
+  padding: 2rem;
+}
+
+.pa3 {
+  padding: 3rem;
+}
+
+/* |||||||| BODY PARTS |||||||| */
+
+.helmet {
+  width: 200px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.gilet {
+  width: 200px;
+  max-width: 200px;
+  height: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.bib {
+  width: 200px;
+  max-width: 200px;
+  height: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.socks {
+  width: 200px;
+  max-width: 200px;
+  height: 50px;
+  margin-top: 88px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.shoes {
+  width: 200px;
+  max-width: 200px;
+  height: 60px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+#helmetColor,
+#glassesColor,
+#giletColor,
+#bibColor,
+#socksColor,
+#shoesColor {
+  display: none;
+}
+
+/* |||||||| MEDIA QUERIES |||||||| */
+
+@media screen and (max-width: 1024px) {
+  p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  li {
+    margin-right: 8px;
+  }
+  .pa1-s {
+    padding: 1.5rem;
+  }
+  .half-w,
+  .third-w {
+    grid-column: span 12;
+  }
+  .ta-center-s {
+    text-align: center;
+  }
+  .half-s{
+    grid-column: span 6;
+  }
+  .vcenter {
+    position: relative;
+    top: 50%;
+    transform: translateY(-40%);
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .half-s{
+    grid-column: span 4;
+  }
+
+  .img-half{
+    grid-column: span 8;
+  }
+
+  li {
+    margin-top: 8px;
+  }
+
+  ul {
+    display: block;
+  }
+
+}
